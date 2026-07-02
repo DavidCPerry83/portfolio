@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /api
 
-Sitemap: https://davidcperry.com/sitemap.xml
+Sitemap: https://davidperry.netlify.app/sitemap.xml
