@@ -15,7 +15,7 @@ import {
 const ABOUT_URL = `${SITE_URL}/about/`;
 
 const ABOUT_DESCRIPTION =
-  "Learn about David Perry - Member of the Technical Staff at Airbnb and builder across AI, security, and infrastructure.";
+  "Learn about David Perry - Senior Software Engineer at Airbnb and builder across AI, security, infrastructure and web applications.";
 
 export const metadata: Metadata = createPageMetadata({
   title: 'About',

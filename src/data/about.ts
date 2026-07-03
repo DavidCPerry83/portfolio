@@ -1,12 +1,14 @@
 export const aboutMarkdown = `# Intro
 
-I started my engineering career in 2010 and have since worked across a diverse range of technologies, high-growth environments, and client-facing initiatives that have shaped both my technical expertise and product-driven mindset.
+I build and scale software across early-stage startups and large-scale engineering environments, with a focus on high-performance systems, product thinking, and user impact.
 
-Recently, I worked at ResearchHub, where I experienced the pace and intensity of an early-stage startup firsthand. Operating in a high-ownership environment strengthened my ability to move quickly, prioritize effectively, and deliver products focused on meaningful user impact.
+I started my engineering career in 2010 and have worked across a range of technologies, fast-growing companies, and client-facing roles that shaped both my technical depth and product-driven mindset.
 
-To further develop my understanding of large-scale engineering and operational excellence, I joined Airbnb as a Senior Engineer. During my time there, systems, managing complex workflows, and delivering software at enterprise scale with high standards for performance, scalable architecture, and product challenges while balancing business goals, user experience, and long-term maintainability.
+More recently, I worked at [ResearchHub](https://researchhub.com), where I experienced the pace and ownership of an early-stage startup firsthand. That environment strengthened my ability to move quickly, prioritize effectively, and build products centered on meaningful user value.
 
-Today, I'm passionate about helping startups scale from early growth stages to global platforms. Long term, my goal is to build products that create meaningful impact for hundreds of millions of users worldwide - inspired by companies such as Coinbase.
+To deepen my experience in large-scale systems and operational excellence, I joined [Airbnb](https://airbnb.com) as a Senior Engineer, working on complex workflows and production systems at enterprise scale, balancing performance, reliability, and long-term maintainability while aligning engineering work with business and user needs.
 
-I'm always interested in connecting with founders, builders, and teams working on ambitious and impactful ideas.
+Today, I’m focused on helping startups scale from early traction to global platforms. Long term, I’m driven by building products that can reach and positively impact hundreds of millions of users, inspired by companies like Coinbase.
+
+I’m always open to connecting with founders, builders, and teams working on ambitious ideas.
 `;

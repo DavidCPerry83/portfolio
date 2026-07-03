@@ -3,7 +3,7 @@
  */
 
 // Site configuration
-export const SITE_URL = 'https://davidcperry.com';
+export const SITE_URL = 'https://davidperry.netlify.app';
 export const AUTHOR_NAME = "David Perry";
 export const TWITTER_HANDLE = '@dangelosaurus';
 export const SITE_IMAGE_PATH = '/images/me.jpg';
@@ -14,7 +14,7 @@ export const SITE_IMAGE_DIMENSIONS = {
 
 // Canonical one-line bio, shared across page metadata, OpenGraph, and JSON-LD.
 export const SITE_DESCRIPTION =
-  'Senior Software Engineer building reliable full-stack products across front-end, back-end, APIs, databases, cloud systems, and AI-related features.';
+  'Senior Software Engineer with 15+ years of experience building scalable web applications, cloud-native platforms, AI-powered solutions, and distributed systems from concept to production.';
 
 // Image dimension constants
 export const AVATAR_SIZE = {

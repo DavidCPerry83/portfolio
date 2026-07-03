@@ -18,25 +18,13 @@ describe('Hero', () => {
     expect(heading).toHaveTextContent("David Perry");
   });
 
-  it('renders the tagline with OpenAI and promptfoo links', () => {
-    render(<Hero />);
-
-    const openAiLink = screen.getByRole('link', { name: /openai/i });
-    expect(openAiLink).toHaveAttribute('href', 'https://openai.com');
-    expect(openAiLink).toHaveClass('hero-highlight');
-
-    const promptfooLink = screen.getByRole('link', { name: /promptfoo/i });
-    expect(promptfooLink).toHaveAttribute('href', 'https://promptfoo.dev');
-    expect(promptfooLink).toHaveClass('hero-highlight');
-  });
-
   it('displays hero chips for credentials', () => {
     render(<Hero />);
 
-    expect(screen.getByText('YC Alum')).toBeInTheDocument();
-    expect(screen.getByText('Stanford ICME')).toBeInTheDocument();
+    expect(screen.getByText('ACC Alum')).toBeInTheDocument();
+    expect(screen.getByText('SEU BS')).toBeInTheDocument();
     expect(
-      screen.getByText('Co-founded Arthena & Matroid'),
+      screen.getByText('Senior Software Engineer at Airbnb'),
     ).toBeInTheDocument();
   });
 

@@ -26,6 +26,12 @@ export default function Hero() {
           from concept to production.
         </p>
 
+        <div className="hero-chips">
+          <span className="hero-chip">ACC Alum</span>
+          <span className="hero-chip">SEU BS</span>
+          <span className="hero-chip">Senior Software Engineer at Airbnb</span>
+        </div>
+
         <div className="hero-cta">
           <Link href="/about" className="button">
             About Me

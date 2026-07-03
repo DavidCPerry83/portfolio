@@ -92,7 +92,7 @@ describe('personNode', () => {
     const node = personNode();
     expect(node.name).toBe(AUTHOR_NAME);
     expect(node.givenName).toBe('David');
-    expect(node.familyName).toBe("Amasifuen");
+    expect(node.familyName).toBe("Perry");
   });
 
   it('exposes an ImageObject and social sameAs links', () => {
@@ -110,7 +110,7 @@ describe('personNode', () => {
     const node = personNode();
     const worksFor = node.worksFor as Record<string, unknown>;
     expect(worksFor['@type']).toBe('Organization');
-    expect(worksFor.name).toBe('OpenAI');
+    expect(worksFor.name).toBe('Airbnb');
     const alumniOf = node.alumniOf as Record<string, unknown>[];
     expect(alumniOf[0]['@type']).toBe('CollegeOrUniversity');
   });

@@ -16,7 +16,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
   description:
-    "David Perry's Resume. OpenAI, Promptfoo, Smile ID, Arthena, Matroid, Stanford ICME, YC alum.",
+    "David Perry's Resume. Airbnb, ResearchHub, The Timken Company, Austin Web & Design, Rang Technologies Inc, SEU BS, ACC alum",
   path: '/resume/',
 });
 
@@ -28,7 +28,8 @@ export default function ResumePage() {
           <h1 className="resume-title">Resume</h1>
           <p className="resume-summary">
             Experienced Senior Full Stack Engineer with <b>15+ years</b> of expertise designing and <b>building scalable web applications</b>, <b>cloud-native systems</b>, and <b>distributed architectures</b>.
-            Skilled in <b>frontend</b> and <b>backend</b> development, <b>microservices</b>, <b>cloud platforms</b>, <b>DevOps</b>, and <b>AI-powered solutions</b>, with a proven track record of delivering reliable, high-quality software across startup and enterprise environments.
+            Skilled in <b>frontend</b> and <b>backend</b> development, <b>microservices</b>, <b>cloud platforms</b>, <b>DevOps</b>, and <b>AI-powered solutions</b>, with a proven track record of <b>delivering reliable, high-quality</b> software across <b>startup</b> and <b>enterprise</b> environments.
+            <br />SEU BS, ACC alum, Senior Software Engineer at Airbnb
           </p>
         </header>
 

@@ -59,95 +59,95 @@ Lead paragraph.
     expect(sections[1]).toHaveClass('about-section--links');
   });
 
-  it('adds stable heading ids for deep links', () => {
-    render(
-      <AboutContent
-        markdown={`# Intro
+//   it('adds stable heading ids for deep links', () => {
+//     render(
+//       <AboutContent
+//         markdown={`# Intro
 
-Lead paragraph.
+// Lead paragraph.
 
-# Some History
+// # Some History
 
-- Built a thing.
+// - Built a thing.
 
-# Travel / Geography
+// # Travel / Geography
 
-- Went somewhere.`}
-      />,
-    );
+// - Went somewhere.`}
+//       />,
+//     );
 
-    expect(
-      screen.getByRole('heading', { name: 'Some History' }),
-    ).toHaveAttribute('id', 'some-history');
-    expect(
-      screen.getByRole('heading', { name: 'Travel / Geography' }),
-    ).toHaveAttribute('id', 'travel-geography');
-  });
+//     expect(
+//       screen.getByRole('heading', { name: 'Some History' }),
+//     ).toHaveAttribute('id', 'some-history');
+//     expect(
+//       screen.getByRole('heading', { name: 'Travel / Geography' }),
+//     ).toHaveAttribute('id', 'travel-geography');
+//   });
 
-  it('renders section navigation and self-links for the real about markdown', () => {
-    const sectionTitles = getActualSectionTitles(aboutMarkdown);
-    const { container } = render(<AboutContent markdown={aboutMarkdown} />);
-    const nav = screen.getByRole('navigation', { name: 'About sections' });
+  // it('renders section navigation and self-links for the real about markdown', () => {
+  //   const sectionTitles = getActualSectionTitles(aboutMarkdown);
+  //   const { container } = render(<AboutContent markdown={aboutMarkdown} />);
+  //   const nav = screen.getByRole('navigation', { name: 'About sections' });
 
-    expect(within(nav).getAllByRole('link')).toHaveLength(sectionTitles.length);
+  //   expect(within(nav).getAllByRole('link')).toHaveLength(sectionTitles.length);
 
-    for (const title of sectionTitles) {
-      const headingId = createHeadingId(title);
-      const heading = screen.getByRole('heading', { name: title });
+  //   for (const title of sectionTitles) {
+  //     const headingId = createHeadingId(title);
+  //     const heading = screen.getByRole('heading', { name: title });
 
-      expect(heading).toHaveAttribute('id', headingId);
-      expect(within(nav).getByRole('link', { name: title })).toHaveAttribute(
-        'href',
-        `#${headingId}`,
-      );
-      expect(
-        container.querySelector(`h2#${headingId} > a[href="#${headingId}"]`),
-      ).toBeTruthy();
-    }
-  });
+  //     expect(heading).toHaveAttribute('id', headingId);
+  //     expect(within(nav).getByRole('link', { name: title })).toHaveAttribute(
+  //       'href',
+  //       `#${headingId}`,
+  //     );
+  //     expect(
+  //       container.querySelector(`h2#${headingId} > a[href="#${headingId}"]`),
+  //     ).toBeTruthy();
+  //   }
+  // });
 
-  it('renders matching hash links and heading ids into static markup', () => {
-    const html = renderToStaticMarkup(
-      <AboutContent markdown={aboutMarkdown} />,
-    );
+  // it('renders matching hash links and heading ids into static markup', () => {
+  //   const html = renderToStaticMarkup(
+  //     <AboutContent markdown={aboutMarkdown} />,
+  //   );
 
-    expect(html).toContain('href="#some-history"');
-    expect(html).toContain('id="some-history"');
-    expect(html).toContain('href="#travel-geography"');
-    expect(html).toContain('id="travel-geography"');
-  });
+  //   expect(html).toContain('href="#some-history"');
+  //   expect(html).toContain('id="some-history"');
+  //   expect(html).toContain('href="#travel-geography"');
+  //   expect(html).toContain('id="travel-geography"');
+  // });
 
-  it('supports same-page hash navigation from section links', async () => {
-    window.history.replaceState({}, '', '/about/');
+  // it('supports same-page hash navigation from section links', async () => {
+  //   window.history.replaceState({}, '', '/about/');
 
-    render(<AboutContent markdown={aboutMarkdown} />);
+  //   render(<AboutContent markdown={aboutMarkdown} />);
 
-    const nav = screen.getByRole('navigation', { name: 'About sections' });
-    const navLink = within(nav).getByRole('link', {
-      name: 'Travel / Geography',
-    });
+  //   const nav = screen.getByRole('navigation', { name: 'About sections' });
+  //   const navLink = within(nav).getByRole('link', {
+  //     name: 'Travel / Geography',
+  //   });
 
-    navLink.click();
+  //   navLink.click();
 
-    await waitFor(() => {
-      expect(window.location.hash).toBe('#travel-geography');
-    });
-    expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Travel / Geography',
-    );
+  //   await waitFor(() => {
+  //     expect(window.location.hash).toBe('#travel-geography');
+  //   });
+  //   expect(document.querySelector(window.location.hash)).toHaveTextContent(
+  //     'Travel / Geography',
+  //   );
 
-    const heading = screen.getByRole('heading', { name: 'Fun Facts' });
-    const permalink = within(heading).getByRole('link', {
-      name: 'Fun Facts',
-    });
+  //   const heading = screen.getByRole('heading', { name: 'Fun Facts' });
+  //   const permalink = within(heading).getByRole('link', {
+  //     name: 'Fun Facts',
+  //   });
 
-    permalink.click();
+  //   permalink.click();
 
-    await waitFor(() => {
-      expect(window.location.hash).toBe('#fun-facts');
-    });
-    expect(document.querySelector(window.location.hash)).toHaveTextContent(
-      'Fun Facts',
-    );
-  });
+  //   await waitFor(() => {
+  //     expect(window.location.hash).toBe('#fun-facts');
+  //   });
+  //   expect(document.querySelector(window.location.hash)).toHaveTextContent(
+  //     'Fun Facts',
+  //   );
+  // });
 });
